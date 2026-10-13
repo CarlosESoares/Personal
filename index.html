@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Eduardo Soares | Desenvolvedor Java e Backend em formação</title>
+<meta name="description" content="Currículo de Carlos Eduardo Soares, estudante de Análise e Desenvolvimento de Sistemas no IFSC, com foco em Java, SQL e backend. Gaspar, SC.">
+<meta property="og:title" content="Carlos Eduardo Soares | Desenvolvedor Java e Backend em formação">
+<meta property="og:description" content="Estudante de ADS no IFSC. Java, SQL, bancos de dados e aplicações web.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#EEF1F6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F6F8B'/%3E%3Ctext x='32' y='43' font-size='30' font-family='monospace' font-weight='700' text-anchor='middle' fill='white'%3ECS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EEF1F6;
+    --surface: #FFFFFF;
+    --ink: #172033;
+    --muted: #546074;
+    --rule: #CBD3DF;
+    --accent: #1F6F8B;
+    --accent-ink: #FFFFFF;
+    --chip: #E3E9F1;
+    --wa: #1A7F4B;
+    --sans: "Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101722;
+      --surface: #182131;
+      --ink: #E8EDF5;
+      --muted: #9AA7BB;
+      --rule: #2D3A50;
+      --accent: #5BB8D6;
+      --accent-ink: #0B1520;
+      --chip: #22304A;
+      --wa: #3DBE80;
+    }
+    .theme-light { display: none; }
+  }
+  @media (prefers-color-scheme: light) { .theme-dark { display: none; } }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 6px; z-index: 10; }
+  .skip:focus { left: 8px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px; }
+
+  /* Topo */
+  .topbar { border-bottom: 1px solid var(--rule); }
+  .topbar .wrap { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; }
+  .topbar nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
+  .topbar nav a { color: var(--muted); text-decoration: none; }
+  .topbar nav a:hover { color: var(--ink); text-decoration: underline; }
+  .topbar .mark { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+
+  /* Hero */
+  .hero { padding: 56px 0 44px; }
+  .hero h1 {
+    font-size: clamp(2.5rem, 7.5vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+    margin: 0 0 14px;
+    max-width: 12ch;
+  }
+  .hero .role { font-size: 1.2rem; color: var(--muted); margin: 0 0 30px; max-width: 46ch; }
+
+  .record {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 28px;
+  }
+  .record header {
+    display: flex; justify-content: space-between; gap: 12px;
+    font-family: var(--mono); font-size: 13px; color: var(--muted);
+    padding: 9px 16px; border-bottom: 1px solid var(--rule); background: var(--chip);
+  }
+  .record dl { margin: 0; }
+  .record .row { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 10px 16px; border-bottom: 1px solid var(--rule); }
+  .record .row:last-child { border-bottom: 0; }
+  .record dt { font-family: var(--mono); font-size: 14px; color: var(--accent); padding-top: 2px; }
+  .record dd { margin: 0; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 8px; font-weight: 600; font-size: 16px;
+    text-decoration: none; border: 1.5px solid var(--ink); color: var(--ink); background: transparent;
+    cursor: pointer; font-family: var(--sans);
+  }
+  .btn:hover { background: var(--chip); }
+  .btn.primary { background: var(--wa); border-color: var(--wa); color: #fff; }
+  .btn.primary:hover { filter: brightness(1.08); background: var(--wa); }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #06210F; } }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+
+  /* Seções */
+  section { padding: 44px 0; border-top: 1px solid var(--rule); }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 20px; font-weight: 800; }
+  h3 { font-size: 1.15rem; margin: 0 0 4px; line-height: 1.3; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  ul.plain { margin: 0 0 14px; padding-left: 20px; max-width: 68ch; }
+  ul.plain li { margin-bottom: 6px; }
+  .meta { color: var(--muted); font-size: 15px; margin: 0 0 10px; }
+
+  /* Tecnologias */
+  .stack-group { display: grid; grid-template-columns: 190px 1fr; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .stack-group:first-of-type { padding-top: 0; }
+  .stack-group:last-of-type { border-bottom: 0; }
+  .stack-group h3 { font-size: 1rem; }
+  .stack-group .hint { color: var(--muted); font-size: 14px; display: block; font-weight: 400; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { background: var(--chip); border-radius: 6px; padding: 4px 11px; font-size: 15px; }
+  .icons { margin-top: 12px; }
+  .icons img { height: 48px; width: auto; max-width: 100%; }
+
+  /* Projeto */
+  .project { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 24px; }
+  .project h3 { font-size: 1.4rem; }
+  .project .tags { margin: 14px 0 16px; }
+  .others { margin-top: 22px; }
+  .others li { margin-bottom: 8px; }
+
+  /* Linha do tempo (sequência real) */
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 2px solid var(--rule); }
+  .timeline li { position: relative; padding: 0 0 30px 20px; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -30px; top: 8px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--bg); border: 2.5px solid var(--accent);
+  }
+  .timeline li.now::before { background: var(--accent); }
+  .timeline .where { color: var(--muted); margin: 0 0 6px; font-size: 15px; }
+  .timeline p { margin-bottom: 0; }
+
+  /* Formação */
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .edu div { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px 20px; }
+  .edu p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* Contato */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: start; }
+  .contact-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+  .contact-list span { display: block; font-size: 14px; color: var(--muted); }
+  form { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 22px; }
+  label { display: block; font-weight: 600; font-size: 15px; margin-bottom: 5px; }
+  input[type=text], input[type=email], textarea {
+    width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+    border: 1.5px solid var(--rule); border-radius: 8px; padding: 10px 12px; margin-bottom: 16px;
+  }
+  textarea { min-height: 130px; resize: vertical; }
+  .form-note { font-size: 14px; color: var(--muted); margin: 12px 0 0; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+  footer { border-top: 1px solid var(--rule); padding: 26px 0 40px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .hero { padding-top: 36px; }
+    .record .row { grid-template-columns: 1fr; gap: 0; }
+    .stack-group { grid-template-columns: 1fr; }
+    .edu, .contact-grid { grid-template-columns: 1fr; }
+    .btn { flex: 1 1 100%; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --ink: #000; --muted: #333; --rule: #bbb; --chip: #eee; --accent: #124c61; }
+    body { font-size: 11.5pt; }
+    .topbar, .actions, form, .skip, .theme-light, .theme-dark, .icons { display: none !important; }
+    .hero { padding: 0 0 16px; }
+    section { padding: 18px 0; break-inside: avoid; }
+    .contact-grid { grid-template-columns: 1fr; }
+    a { color: #000; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="mark">carlos_soares</span>
+    <nav aria-label="Seções da página">
+      <a href="#sobre">Sobre</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#formacao">Formação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</div>
+
+<main id="conteudo">
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Carlos Eduardo Soares</h1>
+      <p class="role">Desenvolvedor em formação com foco em Java, SQL e backend. Procuro minha primeira vaga júnior na área.</p>
+
+      <div class="record" role="group" aria-label="Resumo do currículo">
+        <header><span>desenvolvedor</span><span>1 registro</span></header>
+        <dl>
+          <div class="row"><dt>nome</dt><dd>Carlos Eduardo Soares</dd></div>
+          <div class="row"><dt>curso</dt><dd>Análise e Desenvolvimento de Sistemas, IFSC Campus Gaspar</dd></div>
+          <div class="row"><dt>semestre</dt><dd>3º semestre, conclusão prevista para 2028</dd></div>
+          <div class="row"><dt>cidade</dt><dd>Gaspar, Santa Catarina</dd></div>
+          <div class="row"><dt>foco</dt><dd>Java, SQL, backend e integração com bancos de dados</dd></div>
+          <div class="row"><dt>procura</dt><dd>Vaga júnior de Backend, Java ou Full Stack</dd></div>
+        </dl>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/5547996704956?text=Ol%C3%A1%2C%20Carlos!%20Vi%20seu%20curr%C3%ADculo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+          Chamar no WhatsApp
+        </a>
+        <a class="btn" href="#contato">Enviar e-mail</a>
+        <a class="btn" href="https://linkedin.com/in/carlos-e-soares-3a3243336" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/CarlosESoares" target="_blank" rel="noopener">GitHub</a>
+        <button class="btn" type="button" onclick="window.print()">Salvar em PDF</button>
+      </div>
+    </div>
+
+    <section id="sobre" aria-labelledby="t-sobre">
+      <h2 id="t-sobre">Sobre mim</h2>
+      <p>Sou estudante de Análise e Desenvolvimento de Sistemas no IFSC e concluí o Técnico em Informática Integrado ao Ensino Médio na mesma instituição, em 2025.</p>
+      <p>Desenvolvi aplicações Java integradas a bancos de dados MySQL, usando JDBC, o padrão DAO e orientação a objetos. Tenho interesse em backend, APIs REST, regras de negócio, persistência de dados e desenvolvimento web.</p>
+      <p>Também tenho experiência com suporte técnico, manutenção de computadores, atendimento e resolução de problemas, o que me ajuda a entender o lado de quem usa o sistema.</p>
+    </section>
+
+    <section id="tecnologias" aria-labelledby="t-tec">
+      <h2 id="t-tec">Tecnologias</h2>
+
+      <div class="stack-group">
+        <h3>Usei em projetos</h3>
+        <div>
+          <ul class="chips">
+            <li>Java</li><li>JDBC</li><li>Java Swing</li><li>MySQL</li><li>SQL</li><li>HTML</li><li>Git</li><li>GitHub</li>
+          </ul>
+          <div class="icons">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,mysql,git,github&amp;theme=dark">
+              <img src="https://skillicons.dev/icons?i=java,mysql,git,github&amp;theme=light" alt="" height="48">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <h3>Tenho familiaridade</h3>
+        <ul class="chips">
+          <li>C</li><li>JavaScript</li><li>PHP</li><li>CSS</li><li>SQL Server</li><li>VS Code</li><li>Linux</li><li>Windows</li>
+        </ul>
+      </div>
+
+      <div class="stack-group">
+        <h3>Estou aprendendo</h3>
+        <ul class="chips">
+          <li>Spring Boot</li><li>APIs REST</li><li>React</li><li>Angular</li><li>Quarkus</li>
+        </ul>
+      </div>
+
+      <div class="stack-group">
+        <h3>Próximos estudos</h3>
+        <ul class="chips">
+          <li>Docker</li><li>JUnit</li><li>PostgreSQL</li><li>GitHub Actions</li><li>Autenticação de APIs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" aria-labelledby="t-proj">
+      <h2 id="t-proj">Projetos</h2>
+
+      <article class="project">
+        <h3>Market System: gerenciamento de mercado</h3>
+        <p class="meta">Projeto Integrador do Técnico em Informática, IFSC Campus Gaspar. Projeto acadêmico concluído.</p>
+        <p>Sistema desktop que simula as operações de um mercado, com banco de dados MySQL. Aplica orientação a objetos, SQL e persistência de dados com JDBC e DAOs, em uma estrutura inspirada em MVC.</p>
+        <ul class="plain">
+          <li>Login de funcionários com perfis de acesso</li>
+          <li>Cadastro de funcionários, clientes e produtos</li>
+          <li>Controle de estoque, atualizado a cada venda</li>
+          <li>Vendas com carrinho e pagamento em dinheiro, cartão, Pix ou crédito do cliente</li>
+          <li>Histórico de vendas e relatórios</li>
+        </ul>
+        <ul class="chips tags"><li>Java</li><li>Java Swing</li><li>JDBC</li><li>MySQL</li><li>SQL</li></ul>
+        <a href="https://github.com/CarlosESoares/market-system-java" target="_blank" rel="noopener">Ver código no GitHub</a>
+      </article>
+
+      <ul class="plain others">
+        <li><a href="https://github.com/CarlosESoares/DioLab-Santander" target="_blank" rel="noopener">DioLab-Santander</a>: atividades do bootcamp da Santander, em Java.</li>
+        <li><a href="https://github.com/CarlosESoares/psiSusanaSoares" target="_blank" rel="noopener">psiSusanaSoares</a>: site para a mestre em psicologia Susana Soares, em HTML.</li>
+      </ul>
+    </section>
+
+    <section id="experiencia" aria-labelledby="t-exp">
+      <h2 id="t-exp">Experiência</h2>
+      <ol class="timeline">
+        <li class="now">
+          <h3>Estagiário na Secretaria</h3>
+          <p class="where">IFSC, Campus Gaspar | abril de 2026 até hoje</p>
+          <p>Apoio administrativo e organizacional, atendimento ao público e organização de documentos e processos internos.</p>
+        </li>
+        <li>
+          <h3>Monitor de Alunos</h3>
+          <p class="where">IFSC | setembro a novembro de 2025</p>
+          <p>Apoio pedagógico e técnico aos alunos, auxílio em atividades práticas e comunicação com a equipe acadêmica.</p>
+        </li>
+        <li>
+          <h3>Auxiliar Técnico</h3>
+          <p class="where">UTI Soluções em Informática | março a junho de 2025</p>
+          <p>Atendimento técnico remoto e presencial, diagnóstico e manutenção de hardware e software, instalação e configuração de sistemas. Contato com Windows Server, Active Directory, redes locais e rotinas de backup.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="formacao" aria-labelledby="t-edu">
+      <h2 id="t-edu">Formação</h2>
+      <div class="edu">
+        <div>
+          <h3>Análise e Desenvolvimento de Sistemas</h3>
+          <p>IFSC, Campus Gaspar<br>Cursando, 3º semestre<br>Conclusão prevista para 2028</p>
+        </div>
+        <div>
+          <h3>Técnico em Informática Integrado ao Ensino Médio</h3>
+          <p>IFSC, Campus Gaspar<br>Concluído em 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" aria-labelledby="t-contato">
+      <h2 id="t-contato">Contato</h2>
+      <div class="contact-grid">
+        <div>
+          <p>Respondo mais rápido pelo WhatsApp. Se preferir, envie uma mensagem pelo formulário e você recebe uma confirmação automática no seu e-mail.</p>
+          <ul class="contact-list">
+            <li><span>WhatsApp</span><a href="https://wa.me/5547996704956?text=Ol%C3%A1%2C%20Carlos!%20Vi%20seu%20curr%C3%ADculo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">(47) 99670-4956</a></li>
+            <li><span>E-mail</span><a href="mailto:soaresecarlos15@gmail.com">soaresecarlos15@gmail.com</a></li>
+            <li><span>LinkedIn</span><a href="https://linkedin.com/in/carlos-e-soares-3a3243336" target="_blank" rel="noopener">linkedin.com/in/carlos-e-soares-3a3243336</a></li>
+            <li><span>GitHub</span><a href="https://github.com/CarlosESoares" target="_blank" rel="noopener">github.com/CarlosESoares</a></li>
+          </ul>
+        </div>
+
+        <!-- FormSubmit: envia a mensagem para o seu e-mail e dispara a resposta automática ao visitante -->
+        <form action="https://formsubmit.co/soaresecarlos15@gmail.com" method="POST">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+          <label for="email">Seu e-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+
+          <input type="hidden" name="_subject" value="Contato pelo currículo online">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="Olá! Recebi sua mensagem e respondo assim que possível. Se for urgente, me chame no WhatsApp: (47) 99670-4956. Obrigado pelo contato! Carlos Eduardo Soares">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button class="btn primary" type="submit">Enviar mensagem</button>
+          <p class="form-note">Você recebe uma confirmação por e-mail depois de enviar.</p>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Carlos Eduardo Soares | Gaspar, SC</span>
+    <span>Currículo atualizado em 2026</span>
+  </div>
+</footer>
+</body>
+</html>
